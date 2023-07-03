@@ -1,21 +1,21 @@
 {
-  "template": "<style>\n  .hum-temp-pres_widget .temp_high .icon-tile.colorize {\n    color: red;\n  }\n</style>\n<div class=\"hum-temp-pres_widget\">\n  <div class=\"row\" style=\"padding-bottom:15px;\">\n    <div class=\"col col-xs-3\">\n      <widget-icon iconset=\"'smarthome-set'\" icon=\"'temperature'\" size=\"42\"/>\n    </div>\n    <div class=\"col col-xs-9 text-left\">\n      <span>Temperature</span>\n      <div style=\"font-size: 18px\">\n        <span ng-if=\"itemValue(config.temp_item) > 0\" ng-class=\"{'temp_high': itemValue(config.temp_item) > 20}\">{{'%.1f' | sprintf:itemValue(config.temp_item)}} °C</span>\n        <span ng-if=\"itemValue(config.temp_item) == 'N/A'\">N/A</span>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col col-xs-3\">\n      <widget-icon iconset=\"'smarthome-set'\" icon=\"'thermostat'\" size=\"42\" />\n    </div>\n    <div class=\"col col-xs-9 text-left\">\n      <span>Pressure</span>\n      <div style=\"font-size: 18px\">\n        <span ng-if=\"itemValue(config.pres_item) > 0\">{{'%.1f' | sprintf:itemValue(config.pres_item)}} kPa</span>\n        <span ng-if=\"itemValue(config.pres_item) == 'N/A'\">N/A</span>\n      </div>\n    </div>\n  </div>\n</div>\n",
-  "name": "Simplified Xiaomi: Temperature Pressure",
-  "settings": [
-    {
-      "type": "item",
-      "id": "temp_item",
-      "label": "Temperature: Item",
-      "default": "-"
-    },
-    {
-      "type": "item",
-      "id": "pres_item",
-      "label": "Pressure: Item",
-      "default": "-"
-    }
-  ],
-  "author": Herve MARION",
-  "source_url": "",
-  "readme_url": ""
+    "template": "<div class=\"azergues_widget\">\n  <div class=\"row\" style=\"padding-bottom:15px;\">\n    <div class=\"col col-xs-12\">\n      <div class=\"title-label\" style=\"text-align: center; font-size: 16px;font-weight: bold\">Azergues</div>\n    </div> \n    <div class=\"col col-xs-3\">\n      <widget-icon iconset=\"'eclipse-smarthome-classic'\" icon=\"'niveau'\" size=\"42\"/>\n    </div>\n    <div class=\"col col-xs-9 text-left\">\n      <span>Hauteur</span>\n      <div style=\"font-size: 18px\">\n        <span style=\"color: rgb(234, 240, 60)\" ng-if=\"(itemValue(config.hauteur_item) <= 20)\">{{'%.1f' | sprintf:itemValue(config.hauteur_item)}} cm</span>\n        <span style=\"color: rgb(0, 204, 102)\" ng-if=\"(itemValue(config.hauteur_item) >= 21)\">{{'%.1f' | sprintf:itemValue(config.hauteur_item)}} cm</span>\n        <span style=\"color: rgb(240, 61, 34)\" ng-if=\"(itemValue(config.hauteur_item) > 80)\">{{'%.1f' | sprintf:itemValue(config.hauteur_item)}} cm</span>\n        <span ng-if=\"itemValue(config.hauteur_item) == 'N/A'\">N/A</span>\n      </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"col col-xs-3\">\n      <widget-icon iconset=\"'eclipse-smarthome-classic'\" icon=\"'flow'\" size=\"42\" />\n    </div>\n    <div class=\"col col-xs-9 text-left\">\n      <span>Débit</span>\n      <div style=\"font-size: 18px\">\n        <span ng-if=\"itemValue(config.debit_item) > 0\">{{'%.2f' | sprintf:itemValue(config.debit_item)}} m³/s</span>\n        <span ng-if=\"itemValue(config.debit_item) == 'N/A'\">N/A</span>\n      </div>\n    </div>\n  </div>\n</div>\n",
+    "name": "Rivière",
+    "settings": [
+        {
+            "type": "item",
+            "id": "hauteur_item",
+            "label": "Hauteur: Item",
+            "default": "-"
+        },
+        {
+            "type": "item",
+            "id": "debit_item",
+            "label": "Débit: Item",
+            "default": "-"
+        }
+    ],
+    "author": "Herve MARION",
+    "source_url": "https://raw.githubusercontent.com/andreypopov/habpanel-widget-xiaomi-sensor_weather_v1/master/humidity-temperature-pressure.widget.json",
+    "readme_url": "https://github.com/andreypopov/habpanel-widget-xiaomi-sensor_weather_v1"
 }
